@@ -1,0 +1,220 @@
+﻿@model OnlineStoreForWoman.Models.Product
+
+@{
+    ViewData["Title"] = "Create Product";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    ViewData["EntityIcon"] = "fa fa-th-large";
+}
+
+
+
+<div class="container">
+    <h2>Create Product</h2>
+    <form asp-action="Create" enctype="multipart/form-data" method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+        <div class="row">
+
+            <div class="form-group col-sm-6">
+                @Html.LabelFor(model => model.Name, new { @class = "control-label" })
+                @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group col-sm-6">
+                @Html.LabelFor(model => model.CategoryID, new { @class = "control-label" })
+                @Html.DropDownListFor(model => model.CategoryID, (IEnumerable<SelectListItem>)ViewBag.Category, "-- Select Category --", new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.CategoryID, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="form-group col-sm-6">
+                @Html.LabelFor(model => model.UnitPrice, new { @class = "control-label" })
+                @Html.TextBoxFor(model => model.UnitPrice, new { @class = "form-control" , type = "number"})
+                @Html.ValidationMessageFor(model => model.UnitPrice, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group col-sm-6">
+                @Html.LabelFor(model => model.OldPrice, new { @class = "control-label" })
+                @Html.TextBoxFor(model => model.OldPrice, new { @class = "form-control", type = "number" })
+                @Html.ValidationMessageFor(model => model.OldPrice, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="form-group col-sm-6">
+                @Html.LabelFor(model => model.Discount, new { @class = "control-label" })
+                @Html.TextBoxFor(model => model.Discount, new { @class = "form-control", type = "number" })
+                @Html.ValidationMessageFor(model => model.Discount, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group col-sm-6">
+                @Html.LabelFor(model => model.UnitInStock, new { @class = "control-label" })
+                @Html.TextBoxFor(model => model.UnitInStock,  new { @class = "form-control" , type = "number"})
+                @Html.ValidationMessageFor(model => model.UnitInStock, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-sm-12">
+
+                <div class="form-group">
+
+                    <div class="custom-file">
+                        <input type="file" name="Picture" class="custom-file-input" id="customFile">
+                        <label class="custom-file-label" for="customFile">Choose file</label>
+                    </div>
+                    @Html.ValidationMessageFor(model => model.Picture, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="row">
+            <div class="form-group col-sm-6">
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.ShortDescription, new { @class = "control-label" })
+                    @Html.TextAreaFor(model => model.ShortDescription, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.ShortDescription, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group col-sm-6">
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Note, new { @class = "control-label" })
+                    @Html.TextAreaFor(model => model.Note, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.Note, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="form-group col-sm-6">
+                <button type="submit" id="SaveProduct" class="btn btn-success"><i class="fa fa-save"></i> Create</button>
+            </div>
+        </div>
+
+    </form>
+</div>
+@section Scripts {
+    <script>
+
+
+        $("#SaveProduct").click(function (e) {
+            
+            var productName = $('#Name').val();
+            if (!productName) {
+                e.preventDefault(); // Prevent the form from submitting
+                alert('Please enter a product name.');
+                return;
+            }
+            var unitPrice = $('#UnitPrice').val();
+            if (!unitPrice) {
+                e.preventDefault(); // Prevent the form from submitting
+                alert('Please enter a product Unit Price.');
+                return;
+            }
+
+            var note = $('#Note').val();
+            if (!note) {
+                e.preventDefault(); // Prevent the form from submitting
+                alert('Please enter a product note.');
+                return;
+            }
+            var shortDescription = $('#ShortDescription').val();
+            if (!shortDescription) {
+                e.preventDefault(); // Prevent the form from submitting
+                alert('Please enter a product Short Description.');
+                return;
+            }
+            var discount = $('#Discount').val();
+            if (!discount) {
+                e.preventDefault(); // Prevent the form from submitting
+                alert('Please enter a product discount.');
+                return;
+            }
+            var oldPrice = $('#OldPrice').val();
+            if (!oldPrice) {
+                e.preventDefault(); // Prevent the form from submitting
+                alert('Please enter a product old Price.');
+                return;
+            }
+            var unitInStock = $('#UnitInStock').val();
+
+            if (!unitInStock) {
+                e.preventDefault(); // Prevent the form from submitting
+                alert('Please enter a product Unit In Stock.');
+                return;
+            }
+            // Check if a product name is entered
+          
+            var selectedCategory = $('#CategoryID').val();
+
+            // Check if a category is selected
+            if (!selectedCategory) {
+                e.preventDefault(); // Prevent the form from submitting
+                alert('Please select a category.');
+                return;
+            }
+
+
+            var picture = $('input[name="Picture"]').val();
+
+            // Check if a picture is selected
+            if (!picture) {
+                e.preventDefault(); // Prevent the form from submitting
+                alert('Please upload a picture.');
+                return;
+            }
+            // Prevent the form from submitting normally
+            e.preventDefault();
+
+            // Get the form element
+            var form = $(this).closest('form')[0];
+
+            // Create a new FormData object
+            var formData = new FormData(form);
+
+            // Add the picture file to the FormData object
+            var pictureFile = $("#customFile").get(0).files[0];
+            formData.append("Picture", pictureFile);
+
+            // Submit form data using Ajax
+            $.ajax({
+                url: '@Url.Action("Create", "Product")',
+                type: 'POST',
+                data: formData,
+                cache: false,
+                contentType: false,
+                processData: false,
+                success: function (result) {
+                    if (result.success) {
+                        // Handle success response
+                        // Reload page or redirect to success page
+                        window.location.href = '@Url.Action("Index", "Product")';
+                    } else {
+                        // Handle error response
+                        // Display validation errors
+
+                    }
+                },
+                error: function (xhr, status, error) {
+                    // Handle error response
+                    // Display error message
+                    $('.alert').addClass('alert-danger').text(error);
+                },
+                complete: function () {
+                    // Enable submit button
+                    $('button[type="submit"]').prop('disabled', false);
+                }
+            });
+
+        });
+
+    </script>
+}
+

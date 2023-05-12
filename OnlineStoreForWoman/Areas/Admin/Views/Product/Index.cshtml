@@ -1,0 +1,50 @@
+﻿@model IEnumerable<OnlineStoreForWoman.Models.Product>
+
+@{
+    ViewData["Title"] = "Products";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    ViewData["EntityIcon"] = "fa fa-shopping-cart";
+}
+
+<h1>Products</h1>
+
+<a class="btn btn-primary" href="@Url.Action("Create", "Product", new { area = "Admin" })">
+    <i class="fas fa-plus-circle"></i> Create New
+</a>
+
+<table class="table table-striped">
+    <thead class="thead-light">
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.Name)</th>
+            <th>@Html.DisplayNameFor(model => model.CategoryID)</th>
+            <th>@Html.DisplayNameFor(model => model.UnitPrice)</th>
+            <th>@Html.DisplayNameFor(model => model.OldPrice)</th>
+            <th>@Html.DisplayNameFor(model => model.Discount)</th>
+            <th>@Html.DisplayNameFor(model => model.UnitInStock)</th>
+            <th>@Html.DisplayNameFor(model => model.ProductAvailable)</th>
+            @*<th>@Html.DisplayNameFor(model => model.ShortDescription)</th>*@
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                <td>@Html.DisplayFor(modelItem => item.Category.Name)</td>
+                <td>@Html.DisplayFor(modelItem => item.UnitPrice)</td>
+                <td>@Html.DisplayFor(modelItem => item.OldPrice)</td>
+                <td>@Html.DisplayFor(modelItem => item.Discount)</td>
+                <td>@Html.DisplayFor(modelItem => item.UnitInStock)</td>
+                <td>@Html.DisplayFor(modelItem => item.ProductAvailable)</td>
+                @*<td>@Html.DisplayFor(modelItem => item.ShortDescription)</td>*@
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info btn-sm"><i class="fas fa-eye"></i> Details</a>
+                    
+                    <a href="@Url.Action("Edit", "Product", new { area = "Admin", id = item.Id })" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i> Edit</a>
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i> Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

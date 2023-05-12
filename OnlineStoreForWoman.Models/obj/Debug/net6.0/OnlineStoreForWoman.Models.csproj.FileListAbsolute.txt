@@ -1,0 +1,36 @@
+D:\AbdulSohail\OnlineStoreForWoman2023\OnlineStoreForWoman.Models\bin\Debug\net6.0\OnlineStoreForWoman.Models.deps.json
+D:\AbdulSohail\OnlineStoreForWoman2023\OnlineStoreForWoman.Models\bin\Debug\net6.0\OnlineStoreForWoman.Models.dll
+D:\AbdulSohail\OnlineStoreForWoman2023\OnlineStoreForWoman.Models\bin\Debug\net6.0\OnlineStoreForWoman.Models.pdb
+D:\AbdulSohail\OnlineStoreForWoman2023\OnlineStoreForWoman.Models\obj\Debug\net6.0\OnlineStoreForWoman.Models.csproj.AssemblyReference.cache
+D:\AbdulSohail\OnlineStoreForWoman2023\OnlineStoreForWoman.Models\obj\Debug\net6.0\OnlineStoreForWoman.Models.GeneratedMSBuildEditorConfig.editorconfig
+D:\AbdulSohail\OnlineStoreForWoman2023\OnlineStoreForWoman.Models\obj\Debug\net6.0\OnlineStoreForWoman.Models.AssemblyInfoInputs.cache
+D:\AbdulSohail\OnlineStoreForWoman2023\OnlineStoreForWoman.Models\obj\Debug\net6.0\OnlineStoreForWoman.Models.AssemblyInfo.cs
+D:\AbdulSohail\OnlineStoreForWoman2023\OnlineStoreForWoman.Models\obj\Debug\net6.0\OnlineStoreForWoman.Models.csproj.CoreCompileInputs.cache
+D:\AbdulSohail\OnlineStoreForWoman2023\OnlineStoreForWoman.Models\obj\Debug\net6.0\OnlineStoreForWoman.Models.dll
+D:\AbdulSohail\OnlineStoreForWoman2023\OnlineStoreForWoman.Models\obj\Debug\net6.0\refint\OnlineStoreForWoman.Models.dll
+D:\AbdulSohail\OnlineStoreForWoman2023\OnlineStoreForWoman.Models\obj\Debug\net6.0\OnlineStoreForWoman.Models.pdb
+D:\AbdulSohail\OnlineStoreForWoman2023\OnlineStoreForWoman.Models\obj\Debug\net6.0\ref\OnlineStoreForWoman.Models.dll
+C:\Users\somma\OneDrive\Desktop\Ecommerce Project\2AprilOnlineStoreForWoman2023\2AprilOnlineStoreForWoman2023\OnlineStoreForWoman2023\OnlineStoreForWoman.Models\bin\Debug\net6.0\OnlineStoreForWoman.Models.deps.json
+C:\Users\somma\OneDrive\Desktop\Ecommerce Project\2AprilOnlineStoreForWoman2023\2AprilOnlineStoreForWoman2023\OnlineStoreForWoman2023\OnlineStoreForWoman.Models\bin\Debug\net6.0\OnlineStoreForWoman.Models.dll
+C:\Users\somma\OneDrive\Desktop\Ecommerce Project\2AprilOnlineStoreForWoman2023\2AprilOnlineStoreForWoman2023\OnlineStoreForWoman2023\OnlineStoreForWoman.Models\bin\Debug\net6.0\OnlineStoreForWoman.Models.pdb
+C:\Users\somma\OneDrive\Desktop\Ecommerce Project\2AprilOnlineStoreForWoman2023\2AprilOnlineStoreForWoman2023\OnlineStoreForWoman2023\OnlineStoreForWoman.Models\obj\Debug\net6.0\OnlineStoreForWoman.Models.csproj.AssemblyReference.cache
+C:\Users\somma\OneDrive\Desktop\Ecommerce Project\2AprilOnlineStoreForWoman2023\2AprilOnlineStoreForWoman2023\OnlineStoreForWoman2023\OnlineStoreForWoman.Models\obj\Debug\net6.0\OnlineStoreForWoman.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\somma\OneDrive\Desktop\Ecommerce Project\2AprilOnlineStoreForWoman2023\2AprilOnlineStoreForWoman2023\OnlineStoreForWoman2023\OnlineStoreForWoman.Models\obj\Debug\net6.0\OnlineStoreForWoman.Models.AssemblyInfoInputs.cache
+C:\Users\somma\OneDrive\Desktop\Ecommerce Project\2AprilOnlineStoreForWoman2023\2AprilOnlineStoreForWoman2023\OnlineStoreForWoman2023\OnlineStoreForWoman.Models\obj\Debug\net6.0\OnlineStoreForWoman.Models.AssemblyInfo.cs
+C:\Users\somma\OneDrive\Desktop\Ecommerce Project\2AprilOnlineStoreForWoman2023\2AprilOnlineStoreForWoman2023\OnlineStoreForWoman2023\OnlineStoreForWoman.Models\obj\Debug\net6.0\OnlineStoreForWoman.Models.csproj.CoreCompileInputs.cache
+C:\Users\somma\OneDrive\Desktop\Ecommerce Project\2AprilOnlineStoreForWoman2023\2AprilOnlineStoreForWoman2023\OnlineStoreForWoman2023\OnlineStoreForWoman.Models\obj\Debug\net6.0\OnlineStoreForWoman.Models.dll
+C:\Users\somma\OneDrive\Desktop\Ecommerce Project\2AprilOnlineStoreForWoman2023\2AprilOnlineStoreForWoman2023\OnlineStoreForWoman2023\OnlineStoreForWoman.Models\obj\Debug\net6.0\refint\OnlineStoreForWoman.Models.dll
+C:\Users\somma\OneDrive\Desktop\Ecommerce Project\2AprilOnlineStoreForWoman2023\2AprilOnlineStoreForWoman2023\OnlineStoreForWoman2023\OnlineStoreForWoman.Models\obj\Debug\net6.0\OnlineStoreForWoman.Models.pdb
+C:\Users\somma\OneDrive\Desktop\Ecommerce Project\2AprilOnlineStoreForWoman2023\2AprilOnlineStoreForWoman2023\OnlineStoreForWoman2023\OnlineStoreForWoman.Models\obj\Debug\net6.0\ref\OnlineStoreForWoman.Models.dll
+C:\Users\ALIWANRE\Desktop\OnlineStoreForWoman2023\OnlineStoreForWoman.Models\bin\Debug\net6.0\OnlineStoreForWoman.Models.deps.json
+C:\Users\ALIWANRE\Desktop\OnlineStoreForWoman2023\OnlineStoreForWoman.Models\bin\Debug\net6.0\OnlineStoreForWoman.Models.dll
+C:\Users\ALIWANRE\Desktop\OnlineStoreForWoman2023\OnlineStoreForWoman.Models\bin\Debug\net6.0\OnlineStoreForWoman.Models.pdb
+C:\Users\ALIWANRE\Desktop\OnlineStoreForWoman2023\OnlineStoreForWoman.Models\obj\Debug\net6.0\OnlineStoreForWoman.Models.csproj.AssemblyReference.cache
+C:\Users\ALIWANRE\Desktop\OnlineStoreForWoman2023\OnlineStoreForWoman.Models\obj\Debug\net6.0\OnlineStoreForWoman.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ALIWANRE\Desktop\OnlineStoreForWoman2023\OnlineStoreForWoman.Models\obj\Debug\net6.0\OnlineStoreForWoman.Models.AssemblyInfoInputs.cache
+C:\Users\ALIWANRE\Desktop\OnlineStoreForWoman2023\OnlineStoreForWoman.Models\obj\Debug\net6.0\OnlineStoreForWoman.Models.AssemblyInfo.cs
+C:\Users\ALIWANRE\Desktop\OnlineStoreForWoman2023\OnlineStoreForWoman.Models\obj\Debug\net6.0\OnlineStoreForWoman.Models.csproj.CoreCompileInputs.cache
+C:\Users\ALIWANRE\Desktop\OnlineStoreForWoman2023\OnlineStoreForWoman.Models\obj\Debug\net6.0\OnlineStoreForWoman.Models.dll
+C:\Users\ALIWANRE\Desktop\OnlineStoreForWoman2023\OnlineStoreForWoman.Models\obj\Debug\net6.0\refint\OnlineStoreForWoman.Models.dll
+C:\Users\ALIWANRE\Desktop\OnlineStoreForWoman2023\OnlineStoreForWoman.Models\obj\Debug\net6.0\OnlineStoreForWoman.Models.pdb
+C:\Users\ALIWANRE\Desktop\OnlineStoreForWoman2023\OnlineStoreForWoman.Models\obj\Debug\net6.0\ref\OnlineStoreForWoman.Models.dll

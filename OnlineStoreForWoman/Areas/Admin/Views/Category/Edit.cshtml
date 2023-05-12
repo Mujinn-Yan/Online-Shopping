@@ -1,0 +1,123 @@
+﻿@model OnlineStoreForWoman.Models.Category
+
+@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    ViewData["Title"] = "Edit Category";
+    var isActive = Model.IsActive ? "checked" : "";
+    var isActiveText = Model.IsActive ? "Active" : "Inactive";
+}
+<style>
+    .checkbox label {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        margin: 0 0 0 30px;
+    }
+
+</style>
+<h2>Edit Category</h2>
+
+<form id="editForm" asp-action="Edit" method="post" asp-route-id="@Model.Id">
+    <div class="box box-primary">
+        <div class="box-body">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label asp-for="Name" class="control-label">Name</label>
+                        <input asp-for="Name" id="Name" value="@Model.Name" class="form-control" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label asp-for="Description" class="control-label">Description</label>
+                        <textarea asp-for="Description" id="Description" class="form-control">@Model.Description</textarea>
+
+                        <span asp-validation-for="Description" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+
+                @* <div class="form-group">
+                <label for="IsActive">Status</label>
+                <div class="checkbox">
+                <label>
+                <input type="checkbox" id="IsActive" name="IsActive" value="True" @isActive>
+                @isActiveText
+                </label>
+                </div>
+                </div>*@
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="IsActive">Status</label>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="IsActive" name="IsActive" value="True" @isActive>
+                                @isActiveText
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <input type="submit" value="Save" class="btn btn-primary" />
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</form>
+@section Scripts {
+    <script>
+        $(function () {
+            // Handle form submission using AJAX
+            $('#editForm').submit(function () {
+                var name = $('#Name').val();
+                var description = $('#Description').val();
+                var isActiveValue = $('#IsActive').val();
+                var isactive = false;
+                debugger;
+                if (isActiveValue == 'True') {
+                    isactive = true;
+                }
+                else {
+                    isactive = false;
+
+                }
+                var data = {
+                    category: {
+                        Id: '@Model.Id',
+                        Name: name,
+                        Description: description,
+                        IsActive: isactive
+                    }
+                };
+
+                $.ajax({
+                    url: '@Url.Action("Edit", "Category")',
+                    type: 'POST',
+                    data: data,
+                    success: function (data) {
+                        // Redirect to the index page on success
+                        window.location.href = '@Url.Action("Index", "Category")';
+                    },
+                    error: function () {
+                        alert('An error occurred while processing your request.');
+                    }
+                });
+                return false;
+            });
+        });
+    </script>
+}

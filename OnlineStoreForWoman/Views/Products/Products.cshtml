@@ -1,0 +1,52 @@
+﻿@model IEnumerable<OnlineStoreForWoman.Models.Product>
+
+@{
+    ViewData["Title"] = "Products";
+}
+
+
+<section class="banner-section spad">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="row">
+                    @foreach (var item in ViewBag.products)
+                    {
+                        <div class="col-sm-3">
+                            <div class="product-item">
+                                <div class="pi-pic">
+                                    @if (@item.Discount > 0)
+                                    {
+                                    <span class="sticker-sale pro-sticker">Sale</span>
+                                    }
+                                    <img src="/@item.PicturePath" alt="" class="img-fluid rounded" style="width: 400px; height: 400px; object-fit:cover"   />
+                                    @*<div class="sale">Sale</div>*@
+                                    <div class="icon">
+                                        <i onclick="addToWishList(@item.Id)" class="icon_heart_alt"></i>
+                                    </div>
+                                    <ul>
+                                        @*<li class="w-icon active"><a href="#"><i class="icon_bag_alt"></i></a></li>*@
+                                        <li class="quick-view"><a href="/Products/ProductView?proId=@item.Id">+ Quick View</a></li>
+                                        @*<li class="w-icon"><a href="#"><i class="fa fa-random"></i></a></li>*@
+                                    </ul>
+                                </div>
+                                <div class="pi-text">
+                                     
+                                    @*<div class="catagory-name">@item.Category.Name</div>*@
+                                    <a href="#">
+                                        <h5 style="color:#000000 !important">@item.Name</h5>
+                                    </a>
+                                    <div class="product-price">
+                                        $ @item.UnitPrice.ToString("#,##0.00")
+                                        @*<span>$35.00</span>*@
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

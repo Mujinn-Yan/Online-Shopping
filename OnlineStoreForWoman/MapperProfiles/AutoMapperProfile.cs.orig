@@ -1,0 +1,34 @@
+﻿using AutoMapper;
+using DMClinic.Web.Models.Dtos.StudyModule;
+using DMClinic.Web.Models.StudyModels;
+
+namespace DMClinic.Web.MapperProfiles
+{
+    public class AutoMapperProfile : Profile
+    {
+        public AutoMapperProfile()
+        {
+            SourceMemberNamingConvention = new LowerUnderscoreNamingConvention();
+            DestinationMemberNamingConvention = new PascalCaseNamingConvention();
+
+            CreateMap<Opportunity, Opportunity>();
+            CreateMap<OpportunityCreateOrUpdateDto, Opportunity>();
+            CreateMap<OpportunityCreateOrUpdateDto, Opportunity>().ReverseMap();
+            //CreateMap<MarkInteractionUpdateDto, Opportunity>()
+            //    .ForMember(x => x.Id, opt => opt.MapFrom(y => y.OpportunityID))
+            //    .ForMember(x => x.Site, opt => opt.Ignore());
+            CreateMap<MarkInteractionUpdateDto, OpportunityInteraction>();
+            CreateMap<MarkInteractionUpdateDto, Opportunity>();
+                //.ForMember(x => x.Id, opt => opt.MapFrom(y => y.OpportunityId));
+            CreateMap<OpportunityInteractionAttachementDto, OpportunityInteractionAttachement>();
+<<<<<<< HEAD
+            CreateMap<RoleMenuItem, MenuItemDto>();
+            CreateMap<RoleTableColumn, TableColumnDto>();
+=======
+            CreateMap<SponsorCreateDto, Sponsor>();
+            CreateMap<ContactResearchOrganizationDto, ContactResearchOrganization>();
+            CreateMap<SourceCreateDto, Source>();
+>>>>>>> origin/StudyApp_MA
+        }
+    }
+}

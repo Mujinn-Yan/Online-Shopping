@@ -1,0 +1,55 @@
+﻿@{
+    ViewData["Title"] = "Contact Us";
+}
+
+<div class="banner-section spad">
+    <div class="py-5 text-center">
+        <h2 style="color:#000000">Contact Us</h2>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <label for="name" class="required">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="" value="" required>
+            <div class="invalid-feedback">
+                Valid Name is required.
+            </div>
+        </div>
+        <div class="col-md-6 mb-3">
+            <label for="email" class="required">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="you@example.com">
+            <div class="invalid-feedback">
+                Please enter a valid email address for shipping updates.
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <label for="mobile" class="required">Mobile# </label>
+            <input type="text" class="form-control" id="mobile" placeholder="" required>
+            <div class="invalid-feedback">
+                Mobile Number required.
+            </div>
+        </div>
+        <diiv class="col-md-6 mb-3">
+            <label for="city" class="required">City</label>
+            <select class="custom-select d-block w-100" id="city" required>
+                <option value="">Choose...</option>
+                <option>Karachi</option>
+                <option>Islamabad</option>
+                <option>Lahor</option>
+                <option>Multan</option>
+            </select>
+            <div class="invalid-feedback">
+                Please provide a valid state.
+            </div>
+    </div>
+
+    <hr class="mb-4">
+    <div class="row">
+        <div class="col-sm-12">
+            <button onclick="contactUs()" onclic class="btn btncontactUsbtn-lg btn-block" type="submit">Submit</button>
+        </div>
+    </div>
+</div>
+

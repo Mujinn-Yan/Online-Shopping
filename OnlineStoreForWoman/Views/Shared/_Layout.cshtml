@@ -1,0 +1,268 @@
+﻿@using OnlineStoreForWoman.DataAccess;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - OS For Woman</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="~/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="~/css/themify-icons.css" type="text/css">
+    <link rel="stylesheet" href="~/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="~/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="~/css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="~/css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="~/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="~/css/style.css" type="text/css">
+    <link rel="stylesheet" href="~/css/site.css" type="text/css">
+    <link rel="stylesheet" href="~/css/CartView.css" type="text/css">
+    <link rel="stylesheet" href="~/css/WishList.css" type="text/css">
+    <link rel="stylesheet" href="~/css/FAQ.css" type="text/css">
+
+</head>
+@inject ApplicationDbContext _context
+@{
+    var category = new List<Category>();
+    var cartData = new List<Cart>();
+    var cartTotalAmount = 0.0;
+    var wishList = 0;
+    var customerId = "";
+    string userid = "";
+    if (ViewBag.UserId != null)
+    {
+        userid = ViewBag.UserId;
+        category = _context.Category.ToList();
+        cartData = _context.Cart.Where(x => x.CustomerID == userid).ToList();
+        cartTotalAmount = Convert.ToDouble(cartData.Sum(x => x.Bill));
+        wishList = _context.Wishlist.Count();
+        customerId = ViewBag.CustomerId;
+    }
+    else
+    {
+        category = _context.Category.ToList();
+    }
+}
+
+<body>
+    <header class="header-section">
+        <div class="header-top">
+            <div class="container">
+                <div class="ht-left">
+                    <div class="mail-service">
+                        <i class=" fa fa-envelope"></i>
+                        info@gmail.com
+                    </div>
+                    <div class="phone-service">
+                        <i class=" fa fa-phone"></i>
+                        +00 00.000.000
+                    </div>
+                </div>
+                <div class="ht-right">
+                    @if (userid == "")
+                    {
+                        <a href="Account/Login" class="login-panel"><i class="fa fa-user"></i>Login</a>
+                    }
+                    else
+                    {
+                        <a href="#" class="login-panel" onclick="logout()"><i class="fa fa-user"></i>Logout</a>
+                    }
+                    <div class="lan-selector">
+                        <select class="language_drop" name="countries" id="countries" style="width:300px">
+                            <option value='yt' data-image="/img/flag-1.jpg" data-imagecss="flag yt"
+                                    data-title="English">English</option>
+                        </select>
+                    </div>
+                    <div class="top-social">
+                        <a href="#"><i class="ti-facebook"></i></a>
+                        <a href="#"><i class="ti-twitter-alt"></i></a>
+                        <a href="#"><i class="ti-linkedin"></i></a>
+                        <a href="#"><i class="ti-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="inner-header">
+                <div class="row">
+                    <div class="col-lg-2 col-md-2">
+                        <div class="logo">
+                            <a href="/">
+                                Woman Store
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-7">
+                        <div class="advanced-search">
+                            <button type="button" class="category-btn">All Categories</button>
+                            <div class="input-group">
+                                <input type="text" placeholder="What do you need?" />
+                                <button type="button"><i class="ti-search"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    @if (cartData != null && cartTotalAmount != null)
+                    {
+                        @Html.Partial("_AddToCart",new CartModelView {
+                    CartData = cartData,
+                    WishList = wishList,
+                    TotalAmount = cartTotalAmount,
+                    CustomerId=customerId})
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="nav-item">
+            <div class="container">
+                <div class="nav-depart">
+                    <div class="depart-btn">
+                        @*<i class="ti-menu"></i>
+                        <span>All departments</span>
+                        <ul class="depart-hover">*@
+                        <i class="ti-menu"></i>
+                        <span>Categories</span>
+                        <ul class="depart-hover">
+                            @foreach (var item in category)
+                            {
+                                <li><a href="/Products/Products?catId=@item.Id">@item.Name</a></li>
+                                @*<li>@Url.Action("Products", "Home",new {id = @item.Id})</li>*@
+                            }
+                        </ul>
+                        @*<ul class="depart-hover">
+                        <li class="active"><a href="#">Clothing</a></li>
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">Shoes</a></li>
+                        <li><a href="#">Beauty</a></li>
+                        <li><a href="#">Jewelry</a></li>
+                        <li><a href="#">Lingerie</a></li>
+                        </ul>*@
+                        @* <li class="active"><a href="#">Women’s Clothing</a></li>
+                        <li><a href="#">Men’s Clothing</a></li>
+                        <li><a href="#">Underwear</a></li>
+                        <li><a href="#">Kid's Clothing</a></li>
+                        <li><a href="#">Brand Fashion</a></li>
+                        <li><a href="#">Accessories/Shoes</a></li>
+                        <li><a href="#">Luxury Brands</a></li>
+                        <li><a href="#">Brand Outdoor Apparel</a></li>
+                        </ul>*@
+                    </div>
+                </div>
+                <nav class="nav-menu mobile-menu">
+                    <ul>
+                        <li class="active"><a href="/">Home</a></li>
+                        <li><a href="/Home/AboutUs">About</a></li>
+                        <li>
+                            <a href="#">Pages</a>
+                            <ul class="dropdown">
+                                <li><a href="/ViewCart/ViewCart">Shopping Cart</a></li>
+                                <li><a href="/ViewCart/Checkout">Checkout</a></li>
+
+                                <li><a href="/Account/Register">Register</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/Home/ContactUs">Contact</a></li>
+                        <li><a href="/Home/FAQs">FAQs</a></li>
+                    </ul>
+                </nav>
+                <div id="mobile-menu-wrap"></div>
+            </div>
+        </div>
+    </header>
+
+
+    @RenderBody()
+
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 footer-item">
+                    <h3>About Us</h3>
+                    <p style="color:#ffffff !important">We are an online women's store dedicated to providing the latest fashion trends at affordable prices.</p>
+                    <ul class="footer-links">
+                        <li><a href="/Home/AboutUs">About</a></li>
+                        <li><a href="/Home/ContactUs">Contact</a></li>
+                        <li><a href="/Home/FAQs">FAQs</a></li>
+                    </ul>
+                </div>
+                @* <div class="col-lg-4 col-md-6 footer-item">
+                <h3>Shop Categories</h3>
+                <ul class="footer-links">
+                <li><a href="#">Clothing</a></li>
+                <li><a href="#">Shoes</a></li>
+                <li><a href="#">Accessories</a></li>
+                <li><a href="#">Beauty</a></li>
+                </ul>
+                </div>*@
+                <div class="col-lg-6 col-md-6 footer-item">
+                    <h3>Follow Us</h3>
+                    <div class="top-social">
+                        <a href="#"><i class="ti-facebook"></i></a>
+                        <a href="#"><i class="ti-twitter-alt"></i></a>
+                        <a href="#"><i class="ti-linkedin"></i></a>
+                        <a href="#"><i class="ti-pinterest"></i></a>
+                    </div>
+                    @*<div class="subscribe-form">
+                    <h4>Subscribe to Our Newsletter</h4>
+                    <form>
+                    <input type="email" placeholder="Enter your email">
+                    <button type="submit">Subscribe</button>
+                    </form>
+                    </div>*@
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p style="color:#ffffff !important">
+                            Copyright &copy;2023
+                            All rights reserved |
+                            <i class="fa fa-heart-o" aria-hidden="true"></i> by
+                            <a href="#" target="_blank">Online Woman Store</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    @*  <footer class="footer-section">
+
+    <div class="copyright-reserved">
+    <div class="container">
+    <div class="row">
+    <div class="col-lg-12">
+    <div class="copyright-text">
+
+    Copyright &copy;2023 All rights reserved |  <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://therichpost.com" target="_blank">Online Woman Store</a>
+
+    </div>
+
+    </div>
+    </div>
+    </div>
+    </div>
+    </footer>*@
+
+    <!-- Js Plugins -->
+    <script src="~/js/jquery-3.3.1.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/jquery-ui.min.js"></script>
+    <script src="~/js/jquery.countdown.min.js"></script>
+    <script src="~/js/jquery.nice-select.min.js"></script>
+    <script src="~/js/jquery.zoom.min.js"></script>
+    <script src="~/js/jquery.dd.min.js"></script>
+    <script src="~/js/jquery.slicknav.js"></script>
+    <script src="~/js/owl.carousel.min.js"></script>
+    <script src="~/javascript/common.js"></script>
+    <script src="~/js/main.js"></script>
+    @RenderSection("Scripts", required: false)
+    @RenderSection("ProductCategory",required:false)
+    <script src="~/CustomJS.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

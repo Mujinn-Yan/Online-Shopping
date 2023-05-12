@@ -1,0 +1,275 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<section class="hero-section">
+    <div class="hero-items owl-carousel">
+        <div class="single-hero-items set-bg" data-setbg="img/hero-1.jpg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5">
+                        @*<span>Bag,kids</span>*@
+                        <h1>Black friday</h1>
+                        <p>
+                        
+                        </p>
+                        <a href="#" class="primary-btn">Shop Now</a>
+                    </div>
+                </div>
+                <div class="off-card">
+                    <h2>Sale <span>50%</span></h2>
+                </div>
+            </div>
+        </div>
+        <div class="single-hero-items set-bg" data-setbg="img/select-product-2.jpg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5">
+                        @*<span>Bag,kids</span>*@
+                        <h1>Black friday</h1>
+                        <p>
+                        </p>
+                        <a href="#" class="primary-btn">Shop Now</a>
+                    </div>
+                </div>
+                <div class="off-card">
+                    <h2>Sale <span>50%</span></h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="banner-section spad">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title">
+                    <h2>All Categories</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="product-slider owl-carousel">
+                    @foreach (var item in ViewBag.category)
+                    {
+                        <div class="product-item">
+                            <div class="pi-pic">
+                                <div class="single-banner">
+                                    <img src="/@item.PicturePath" alt="" class="img-fluid rounded" style="width: 400px; height: 400px; object-fit:cover" />
+                                    <div class="inner-text">
+                                        <h4>@item.Name</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="women-banner spad">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title">
+                    <h2>All Products</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="product-slider owl-carousel">
+                    @foreach (var item in ViewBag.products)
+                    {
+
+                        <div class="product-item">
+                            <div class="pi-pic">
+                                @if (@item.Discount > 0)
+                                {
+                                    <span class="sticker-sale pro-sticker">Sale</span>
+                                }
+                                <img src="/@item.PicturePath" alt="" class="img-fluid rounded" style="width: 400px; height: 400px; object-fit:cover" />
+                                <div class="icon">
+                                    <i onclick="addToWishList(@item.Id)" class="icon_heart_alt"></i>
+                                </div>
+                                <ul>
+                                    @*<li class="w-icon active"><a href="#"><i class="icon_bag_alt"></i></a></li>*@
+                                    <li class="quick-view"><a href="/Products/ProductView?proId=@item.Id">+ Quick View</a></li>
+                                    @*<li class="w-icon"><a href="#"><i class="fa fa-random"></i></a></li>*@
+                                </ul>
+                            </div>
+                            <div class="pi-text">
+                                <div class="catagory-name">@item.Category.Name</div>
+                                <a href="#">
+                                    <h5 style="color:#000000 !important">@item.Name</h5>
+                                </a>
+                                <div class="product-price">
+                                    $ @item.UnitPrice.ToString("#,##0.00")
+                                    <span class="discount">@item.Discount</span>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="instagram-photo">
+    <div class="insta-item set-bg" data-setbg="img/insta-1.jpg">
+        <div class="inside-text">
+            <i class="ti-instagram"></i>
+            <h5><a href="#">jassa_Collection</a></h5>
+        </div>
+    </div>
+    <div class="insta-item set-bg" data-setbg="img/insta-2.jpg">
+        <div class="inside-text">
+            <i class="ti-instagram"></i>
+            <h5><a href="#">jassa_Collection</a></h5>
+        </div>
+    </div>
+    <div class="insta-item set-bg" data-setbg="img/insta-3.jpg">
+        <div class="inside-text">
+            <i class="ti-instagram"></i>
+            <h5><a href="#">jassa_Collection</a></h5>
+        </div>
+    </div>
+    <div class="insta-item set-bg" data-setbg="img/insta-1.jpg">
+        <div class="inside-text">
+            <i class="ti-instagram"></i>
+            <h5><a href="#">jassa_Collection</a></h5>
+        </div>
+    </div>
+    <div class="insta-item set-bg" data-setbg="img/insta-2.jpg">
+        <div class="inside-text">
+            <i class="ti-instagram"></i>
+            <h5><a href="#">jassa_Collection</a></h5>
+        </div>
+    </div>
+    <div class="insta-item set-bg" data-setbg="img/insta-3.jpg">
+        <div class="inside-text">
+            <i class="ti-instagram"></i>
+            <h5><a href="#">jassa_Collection</a></h5>
+        </div>
+    </div>
+</div>
+
+<section class="latest-blog spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title">
+                    <h2>From The Blog</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="single-latest-blog">
+                    <img src="img/latest-1.jpg" alt="" />
+                    <div class="latest-text">
+                        <div class="tag-list">
+                            <div class="tag-item">
+                                <i class="fa fa-calendar-o"></i>
+                                May 4,2021
+                            </div>
+                            <div class="tag-item">
+                                <i class="fa fa-comment-o"></i>
+                                5
+                            </div>
+                        </div>
+                        <a href="#">
+                            <h4>The Best Street Style From London Fashion Week</h4>
+                        </a>
+                        <p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="single-latest-blog">
+                    <img src="img/latest-2.jpg" alt="" />
+                    <div class="latest-text">
+                        <div class="tag-list">
+                            <div class="tag-item">
+                                <i class="fa fa-calendar-o"></i>
+                                May 4,2021
+                            </div>
+                            <div class="tag-item">
+                                <i class="fa fa-comment-o"></i>
+                                5
+                            </div>
+                        </div>
+                        <a href="#">
+                            <h4>Vogue's Ultimate Guide To Autumn/Winter 2021 Shoes</h4>
+                        </a>
+                        <p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="single-latest-blog">
+                    <img src="img/latest-3.jpg" alt="" />
+                    <div class="latest-text">
+                        <div class="tag-list">
+                            <div class="tag-item">
+                                <i class="fa fa-calendar-o"></i>
+                                May 4,2021
+                            </div>
+                            <div class="tag-item">
+                                <i class="fa fa-comment-o"></i>
+                                5
+                            </div>
+                        </div>
+                        <a href="#">
+                            <h4>How To Brighten Your Wardrobe With A Dash Of Lime</h4>
+                        </a>
+                        <p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="benefit-items">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="single-benefit">
+                        <div class="sb-icon">
+                            <img src="img/icon-1.png" alt="" />
+                        </div>
+                        <div class="sb-text">
+                            <h6>Free Shipping</h6>
+                            <p>For all order over 99<pre wp-pre-tag-1=""></pre></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="single-benefit">
+                        <div class="sb-icon">
+                            <img src="img/icon-2.png" alt="" />
+                        </div>
+                        <div class="sb-text">
+                            <h6>Delivery On Time</h6>
+                            <p>If good have prolems</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="single-benefit">
+                        <div class="sb-icon">
+                            <img src="img/icon-1.png" alt="" />
+                        </div>
+                        <div class="sb-text">
+                            <h6>Secure Payment</h6>
+                            <p>100% secure payment</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

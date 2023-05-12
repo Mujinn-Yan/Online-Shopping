@@ -1,0 +1,58 @@
+﻿@{
+    Layout = "_Layout";
+    ViewData["Title"] = "My Wish List";
+}
+
+<div class="banner-section spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="main-heading mb-10">My wishlist</div>
+                <div class="table-wishlist">
+                    <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                        <thead>
+                            <tr>
+                                <th width="45%">Product Name</th>
+                                <th width="15%">Unit Price</th>
+                                <th width="15%">Stock Status</th>
+                                <th width="15%" colspan="2">Action</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in ViewBag.WishList)
+                            {
+                                <tr>
+                                    <td width="45%">
+                                        <div class="display-flex align-center">
+                                            <div class="img-product">
+                                                <img src="/@item.Product.PicturePath" alt="@item.Product.Name" class="mCS_img_loaded">
+                                            </div>
+                                            <div class="name-product">
+                                                @item.Product.Name
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td width="15%" class="price">$ @item.Product.UnitPrice.ToString("#,##0.00")</td>
+                                    @if (@item.Product.UnitInStock > 0)
+                                    {
+                                        <td width="15%"><span class="in-stock-box">In Stock</span></td>
+                                    }
+                                    else
+                                    {
+                                        <td width="15%"><span class="out-stock-box">Out of Stock</span></td>
+                                    }
+                                    <td width="15%"><button onclick="window.location='/Products/ProductView?proId=@item.Product.Id'" class="round-black-btn small-btn">Quick View</button></td>
+                                    <td class="si-close">
+                                        <i onclick="removefromWishtList(@item.Product.Id)" class="ti-close"></i>
+                                    </td>
+                                </tr>
+                            }
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

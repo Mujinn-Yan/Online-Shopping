@@ -1,0 +1,88 @@
+﻿@model IEnumerable<OnlineStoreForWoman.Models.Cart>;
+
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "View Cart";
+}
+
+
+<section class="banner-section">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title">
+                    <h2>View Cart</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="container">
+                    <div class="cart transition is-open">
+                        <a href="#" onclick="UpdateCart()" class="btn btn-update">Update cart</a>
+                        <div class="table">
+                            <table id="tblcartitems" class="table" cellpadding="0" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Product</th>
+                                        <th>Price</th>
+                                        <th>Discount/Unit</th>
+                                        <th>Qty</th>
+                                        <th>Total</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in ViewBag.CartItems)
+                                    {
+                                        <tr>
+                                            <td>@item.Id</td>
+                                            <td style="display:none">@item.ProductId</td>
+                                            <td>
+                                                <div class="col-pro layout-inline">
+                                                    <img class="cart-img" src="/@item.PicturePath" alt="@item.ProductName" />
+                                                    <p>@item.ProductName</p>
+                                                </div>
+                                            </td>
+                                            <td> <p>$ @item.Price.ToString("#,##0.00")</p></td>
+                                            <td> <p>@item.Discount.ToString("#,##0.00")</p></td>
+                                            <td>
+                                                @*<a href="#" class="qty qty-minus">-</a>*@
+                                                <input id="productqty" min="1" max="10" type="number" value="@item.Qty" />
+                                                @* <a href="#" class="qty qty-plus">+</a>*@
+                                            </td>
+                                            <td>
+                                                <p>$ @item.Bill.ToString("#,##0.00")</p>
+                                            </td>
+                                            <td class="si-close">
+                                                <i onclick="removeToCart(@item.Id)" class="ti-close"></i>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td colspan="4"></td>
+                                        <td>Total Discount</td>
+                                        <td>@ViewBag.TotalDiscount</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4"></td>
+                                        <td>Total Amount</td>
+                                        <td id="totalAmount">$ @ViewBag.TotalAmount.ToString("#,##0.00")</td>
+                                        <td></td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+
+                        <a href="/ViewCart/CheckOut?CustomerID=1" class="btn btn-update">Check Out</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

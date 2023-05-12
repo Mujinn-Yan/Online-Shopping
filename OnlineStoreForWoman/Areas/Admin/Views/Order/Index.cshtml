@@ -1,0 +1,35 @@
+﻿@model IEnumerable<OnlineStoreForWoman.Models.Order>
+
+@{
+    ViewData["Title"] = "Orders";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    ViewData["EntityIcon"] = "fa fa-shopping-cart";
+}
+
+<h2>Orders</h2>
+<table class="table table-hover">
+    <thead class="thead-light">
+        <tr>
+            <th>Order Date</th>
+            <th>Customer </th>
+            <th>Shipping ID</th>
+            <th>Discount</th>
+            <th>Total Amount</th>
+            <th>Order Completed</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var order in Model)
+        {
+            <tr>
+                @*<td>@order.Id</td>*@
+                <td>@order.OrderDate.ToString("dd/MM/yyyy")</td>
+                <td>@order.CustomerName</td>
+                <td>@order.ShippingID</td>
+                <td>@order.Discount</td>
+                <td>@order.TotalAmount</td>
+                <td>@(order.isCompleted ? "Yes" : "No")</td>
+            </tr>
+        }
+    </tbody>
+</table>

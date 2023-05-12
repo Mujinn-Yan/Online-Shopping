@@ -1,0 +1,72 @@
+﻿@model CartModelView
+
+@{
+    //var cartItems = @Model.CartData.Count;
+    var cartCount = 0;
+    if (@Model.CartData.Count != null)
+    {
+        cartCount = @Model.CartData.Count;
+    }
+    var wishlistcount = 0;
+    if (@Model.WishList != null)
+    {
+        wishlistcount = @Model.WishList;
+    }
+    var CustomerId = "";
+    if (ViewBag.CustomerId!=null)
+    {
+        
+     CustomerId = ViewBag.CustomerId;
+    }
+
+}
+
+
+<div class="col-lg-3 text-right col-md-3">
+    <ul class="nav-right">
+        <li class="heart-icon">
+            <a href="/ViewCart/MyWishList?customerID=@CustomerId">
+                <i class="icon_heart_alt"></i>
+                <span>@wishlistcount</span>
+            </a>
+        </li>
+        <li class="cart-icon">
+            <a href="#">
+                <i class="icon_bag_alt"></i>
+                <span id="cartCount">@cartCount</span>
+            </a>
+            <div class="cart-hover">
+                <div class="select-items" style="overflow-y: scroll;height: 300px;">
+                    <table>
+                        <tbody>
+                            @foreach (var item in @Model.CartData)
+                            {
+                                <tr>
+                                    <td class="si-pic"><img width="100" height="100" src="/@item.PicturePath" alt="" /></td>
+                                    <td class="si-text">
+                                        <div class="product-selected">
+                                            <p>$ @item.Price.ToString("#,##0.00")</p>
+                                            <h6>@item.ProductName</h6>
+                                        </div>
+                                    </td>
+                                    <td class="si-close">
+                                        <i onclick="removeToCart(@item.Id)" class="ti-close"></i>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                <div class="select-total">
+                    <span>Total:</span>
+                    <h5>$ @Model.TotalAmount.ToString("#,##0.00")</h5>
+                </div>
+                <div class="select-button">
+                    <a href="/ViewCart/ViewCart" class="primary-btn view-card">VIEW CART</a>
+                    <a href="/ViewCart/Checkout" class="primary-btn checkout-btn">CHECK OUT</a>
+                </div>
+            </div>
+        </li>
+        <li class="cart-price">$ @Model.TotalAmount.ToString("#,##0.00")</li>
+    </ul>
+</div>

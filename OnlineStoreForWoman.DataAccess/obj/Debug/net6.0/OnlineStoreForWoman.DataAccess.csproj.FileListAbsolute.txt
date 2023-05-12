@@ -1,0 +1,51 @@
+D:\AbdulSohail\OnlineStoreForWoman2023\OnlineStoreForWoman.DataAccess\bin\Debug\net6.0\OnlineStoreForWoman.DataAccess.deps.json
+D:\AbdulSohail\OnlineStoreForWoman2023\OnlineStoreForWoman.DataAccess\bin\Debug\net6.0\OnlineStoreForWoman.DataAccess.runtimeconfig.json
+D:\AbdulSohail\OnlineStoreForWoman2023\OnlineStoreForWoman.DataAccess\bin\Debug\net6.0\OnlineStoreForWoman.DataAccess.dll
+D:\AbdulSohail\OnlineStoreForWoman2023\OnlineStoreForWoman.DataAccess\bin\Debug\net6.0\OnlineStoreForWoman.DataAccess.pdb
+D:\AbdulSohail\OnlineStoreForWoman2023\OnlineStoreForWoman.DataAccess\bin\Debug\net6.0\OnlineStoreForWoman.Models.dll
+D:\AbdulSohail\OnlineStoreForWoman2023\OnlineStoreForWoman.DataAccess\bin\Debug\net6.0\OnlineStoreForWoman.Models.pdb
+D:\AbdulSohail\OnlineStoreForWoman2023\OnlineStoreForWoman.DataAccess\obj\Debug\net6.0\OnlineStoreForWoman.DataAccess.csproj.AssemblyReference.cache
+D:\AbdulSohail\OnlineStoreForWoman2023\OnlineStoreForWoman.DataAccess\obj\Debug\net6.0\OnlineStoreForWoman.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+D:\AbdulSohail\OnlineStoreForWoman2023\OnlineStoreForWoman.DataAccess\obj\Debug\net6.0\OnlineStoreForWoman.DataAccess.AssemblyInfoInputs.cache
+D:\AbdulSohail\OnlineStoreForWoman2023\OnlineStoreForWoman.DataAccess\obj\Debug\net6.0\OnlineStoreForWoman.DataAccess.AssemblyInfo.cs
+D:\AbdulSohail\OnlineStoreForWoman2023\OnlineStoreForWoman.DataAccess\obj\Debug\net6.0\OnlineStoreForWoman.DataAccess.csproj.CoreCompileInputs.cache
+D:\AbdulSohail\OnlineStoreForWoman2023\OnlineStoreForWoman.DataAccess\obj\Debug\net6.0\OnlineStoreForWoman.DataAccess.csproj.CopyComplete
+D:\AbdulSohail\OnlineStoreForWoman2023\OnlineStoreForWoman.DataAccess\obj\Debug\net6.0\OnlineStoreForWoman.DataAccess.dll
+D:\AbdulSohail\OnlineStoreForWoman2023\OnlineStoreForWoman.DataAccess\obj\Debug\net6.0\refint\OnlineStoreForWoman.DataAccess.dll
+D:\AbdulSohail\OnlineStoreForWoman2023\OnlineStoreForWoman.DataAccess\obj\Debug\net6.0\OnlineStoreForWoman.DataAccess.pdb
+D:\AbdulSohail\OnlineStoreForWoman2023\OnlineStoreForWoman.DataAccess\obj\Debug\net6.0\OnlineStoreForWoman.DataAccess.genruntimeconfig.cache
+D:\AbdulSohail\OnlineStoreForWoman2023\OnlineStoreForWoman.DataAccess\obj\Debug\net6.0\ref\OnlineStoreForWoman.DataAccess.dll
+C:\Users\somma\OneDrive\Desktop\Ecommerce Project\2AprilOnlineStoreForWoman2023\2AprilOnlineStoreForWoman2023\OnlineStoreForWoman2023\OnlineStoreForWoman.DataAccess\bin\Debug\net6.0\OnlineStoreForWoman.DataAccess.deps.json
+C:\Users\somma\OneDrive\Desktop\Ecommerce Project\2AprilOnlineStoreForWoman2023\2AprilOnlineStoreForWoman2023\OnlineStoreForWoman2023\OnlineStoreForWoman.DataAccess\bin\Debug\net6.0\OnlineStoreForWoman.DataAccess.runtimeconfig.json
+C:\Users\somma\OneDrive\Desktop\Ecommerce Project\2AprilOnlineStoreForWoman2023\2AprilOnlineStoreForWoman2023\OnlineStoreForWoman2023\OnlineStoreForWoman.DataAccess\bin\Debug\net6.0\OnlineStoreForWoman.DataAccess.dll
+C:\Users\somma\OneDrive\Desktop\Ecommerce Project\2AprilOnlineStoreForWoman2023\2AprilOnlineStoreForWoman2023\OnlineStoreForWoman2023\OnlineStoreForWoman.DataAccess\bin\Debug\net6.0\OnlineStoreForWoman.DataAccess.pdb
+C:\Users\somma\OneDrive\Desktop\Ecommerce Project\2AprilOnlineStoreForWoman2023\2AprilOnlineStoreForWoman2023\OnlineStoreForWoman2023\OnlineStoreForWoman.DataAccess\bin\Debug\net6.0\OnlineStoreForWoman.Models.dll
+C:\Users\somma\OneDrive\Desktop\Ecommerce Project\2AprilOnlineStoreForWoman2023\2AprilOnlineStoreForWoman2023\OnlineStoreForWoman2023\OnlineStoreForWoman.DataAccess\bin\Debug\net6.0\OnlineStoreForWoman.Models.pdb
+C:\Users\somma\OneDrive\Desktop\Ecommerce Project\2AprilOnlineStoreForWoman2023\2AprilOnlineStoreForWoman2023\OnlineStoreForWoman2023\OnlineStoreForWoman.DataAccess\obj\Debug\net6.0\OnlineStoreForWoman.DataAccess.csproj.AssemblyReference.cache
+C:\Users\somma\OneDrive\Desktop\Ecommerce Project\2AprilOnlineStoreForWoman2023\2AprilOnlineStoreForWoman2023\OnlineStoreForWoman2023\OnlineStoreForWoman.DataAccess\obj\Debug\net6.0\OnlineStoreForWoman.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\somma\OneDrive\Desktop\Ecommerce Project\2AprilOnlineStoreForWoman2023\2AprilOnlineStoreForWoman2023\OnlineStoreForWoman2023\OnlineStoreForWoman.DataAccess\obj\Debug\net6.0\OnlineStoreForWoman.DataAccess.AssemblyInfoInputs.cache
+C:\Users\somma\OneDrive\Desktop\Ecommerce Project\2AprilOnlineStoreForWoman2023\2AprilOnlineStoreForWoman2023\OnlineStoreForWoman2023\OnlineStoreForWoman.DataAccess\obj\Debug\net6.0\OnlineStoreForWoman.DataAccess.AssemblyInfo.cs
+C:\Users\somma\OneDrive\Desktop\Ecommerce Project\2AprilOnlineStoreForWoman2023\2AprilOnlineStoreForWoman2023\OnlineStoreForWoman2023\OnlineStoreForWoman.DataAccess\obj\Debug\net6.0\OnlineStoreForWoman.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\somma\OneDrive\Desktop\Ecommerce Project\2AprilOnlineStoreForWoman2023\2AprilOnlineStoreForWoman2023\OnlineStoreForWoman2023\OnlineStoreForWoman.DataAccess\obj\Debug\net6.0\OnlineStoreForWoman.DataAccess.csproj.CopyComplete
+C:\Users\somma\OneDrive\Desktop\Ecommerce Project\2AprilOnlineStoreForWoman2023\2AprilOnlineStoreForWoman2023\OnlineStoreForWoman2023\OnlineStoreForWoman.DataAccess\obj\Debug\net6.0\OnlineStoreForWoman.DataAccess.dll
+C:\Users\somma\OneDrive\Desktop\Ecommerce Project\2AprilOnlineStoreForWoman2023\2AprilOnlineStoreForWoman2023\OnlineStoreForWoman2023\OnlineStoreForWoman.DataAccess\obj\Debug\net6.0\refint\OnlineStoreForWoman.DataAccess.dll
+C:\Users\somma\OneDrive\Desktop\Ecommerce Project\2AprilOnlineStoreForWoman2023\2AprilOnlineStoreForWoman2023\OnlineStoreForWoman2023\OnlineStoreForWoman.DataAccess\obj\Debug\net6.0\OnlineStoreForWoman.DataAccess.pdb
+C:\Users\somma\OneDrive\Desktop\Ecommerce Project\2AprilOnlineStoreForWoman2023\2AprilOnlineStoreForWoman2023\OnlineStoreForWoman2023\OnlineStoreForWoman.DataAccess\obj\Debug\net6.0\OnlineStoreForWoman.DataAccess.genruntimeconfig.cache
+C:\Users\somma\OneDrive\Desktop\Ecommerce Project\2AprilOnlineStoreForWoman2023\2AprilOnlineStoreForWoman2023\OnlineStoreForWoman2023\OnlineStoreForWoman.DataAccess\obj\Debug\net6.0\ref\OnlineStoreForWoman.DataAccess.dll
+C:\Users\ALIWANRE\Desktop\OnlineStoreForWoman2023\OnlineStoreForWoman.DataAccess\bin\Debug\net6.0\OnlineStoreForWoman.DataAccess.deps.json
+C:\Users\ALIWANRE\Desktop\OnlineStoreForWoman2023\OnlineStoreForWoman.DataAccess\bin\Debug\net6.0\OnlineStoreForWoman.DataAccess.runtimeconfig.json
+C:\Users\ALIWANRE\Desktop\OnlineStoreForWoman2023\OnlineStoreForWoman.DataAccess\bin\Debug\net6.0\OnlineStoreForWoman.DataAccess.dll
+C:\Users\ALIWANRE\Desktop\OnlineStoreForWoman2023\OnlineStoreForWoman.DataAccess\bin\Debug\net6.0\OnlineStoreForWoman.DataAccess.pdb
+C:\Users\ALIWANRE\Desktop\OnlineStoreForWoman2023\OnlineStoreForWoman.DataAccess\bin\Debug\net6.0\OnlineStoreForWoman.Models.dll
+C:\Users\ALIWANRE\Desktop\OnlineStoreForWoman2023\OnlineStoreForWoman.DataAccess\bin\Debug\net6.0\OnlineStoreForWoman.Models.pdb
+C:\Users\ALIWANRE\Desktop\OnlineStoreForWoman2023\OnlineStoreForWoman.DataAccess\obj\Debug\net6.0\OnlineStoreForWoman.DataAccess.csproj.AssemblyReference.cache
+C:\Users\ALIWANRE\Desktop\OnlineStoreForWoman2023\OnlineStoreForWoman.DataAccess\obj\Debug\net6.0\OnlineStoreForWoman.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ALIWANRE\Desktop\OnlineStoreForWoman2023\OnlineStoreForWoman.DataAccess\obj\Debug\net6.0\OnlineStoreForWoman.DataAccess.AssemblyInfoInputs.cache
+C:\Users\ALIWANRE\Desktop\OnlineStoreForWoman2023\OnlineStoreForWoman.DataAccess\obj\Debug\net6.0\OnlineStoreForWoman.DataAccess.AssemblyInfo.cs
+C:\Users\ALIWANRE\Desktop\OnlineStoreForWoman2023\OnlineStoreForWoman.DataAccess\obj\Debug\net6.0\OnlineStoreForWoman.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\ALIWANRE\Desktop\OnlineStoreForWoman2023\OnlineStoreForWoman.DataAccess\obj\Debug\net6.0\OnlineStoreForWoman.DataAccess.csproj.CopyComplete
+C:\Users\ALIWANRE\Desktop\OnlineStoreForWoman2023\OnlineStoreForWoman.DataAccess\obj\Debug\net6.0\OnlineStoreForWoman.DataAccess.dll
+C:\Users\ALIWANRE\Desktop\OnlineStoreForWoman2023\OnlineStoreForWoman.DataAccess\obj\Debug\net6.0\refint\OnlineStoreForWoman.DataAccess.dll
+C:\Users\ALIWANRE\Desktop\OnlineStoreForWoman2023\OnlineStoreForWoman.DataAccess\obj\Debug\net6.0\OnlineStoreForWoman.DataAccess.pdb
+C:\Users\ALIWANRE\Desktop\OnlineStoreForWoman2023\OnlineStoreForWoman.DataAccess\obj\Debug\net6.0\OnlineStoreForWoman.DataAccess.genruntimeconfig.cache
+C:\Users\ALIWANRE\Desktop\OnlineStoreForWoman2023\OnlineStoreForWoman.DataAccess\obj\Debug\net6.0\ref\OnlineStoreForWoman.DataAccess.dll
